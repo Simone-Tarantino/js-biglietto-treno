@@ -17,10 +17,13 @@ if (etaPasseggero <= 18) {
   var scontoPercentuale = (prezzoBigliettoViaggioCompleto * 20) / 100;
   var prezzoBigliettoScontato = prezzoBigliettoViaggioCompleto - scontoPercentuale;
   console.log(prezzoBigliettoScontato);
+  document.getElementById('prezzo-biglietto').innerHTML = "Ciao! Il prezzo del tuo biglietto è " + Math.round(prezzoBigliettoScontato) + ". Hai usufruito dello sconto under 18 del 20% sul prezzo pieno del biglietto!"
 } else if (etaPasseggero >= 65) {
   var scontoPercentuale = (prezzoBigliettoViaggioCompleto * 40) / 100;
   var prezzoBigliettoScontato = prezzoBigliettoViaggioCompleto - scontoPercentuale;
   console.log(prezzoBigliettoScontato);
+  document.getElementById('prezzo-biglietto').innerHTML = "Salve! Il prezzo del suo biglietto è " + Math.round(prezzoBigliettoScontato) + ". Hai usufruito dello sconto under 65 del 40% sul prezzo pieno del biglietto!"
 } else {
   console.log(prezzoBigliettoViaggioCompleto);
+  document.getElementById('prezzo-biglietto').innerHTML = "Ciao! Il prezzo del tuo biglietto è " + prezzoBigliettoViaggioCompleto + ". Non ti è possibile utilizzare alcun tipo di sconto ci dispiace."
 }
